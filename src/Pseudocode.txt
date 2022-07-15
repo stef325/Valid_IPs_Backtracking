@@ -1,0 +1,40 @@
+
+AllValidIps(stringRecebida,indice, contador, IP){
+
+    se(o tamanho da stringRecebida = index e contador = 4){
+        retira o ponto do final
+        imprima(ip)
+        retorne;
+    }
+
+    se(o tamaho da stringRecebida é menor que o indice +1){
+        retorne;
+    }
+
+    IP < proximo caractere da stringRecebida a partir do indice e adiciona um ponto
+
+    AllValidIps(stringRecebida,indice+1,contador+1, IP)
+
+    IP < retira o ultimo caractere e o ponto
+
+    se o tamanho da stringRecebida é menor que indice +2 ou o caractere do indice atual é = 0{
+        retorne;
+    }
+
+    IP < proximos dois caracteres da stringRecebida a partir do indice e adiciona um ponto
+
+    AllValidIps(stringRecebida,indice+2,contador+1, IP)
+
+    IP < retira os dois ultimos caracteres e o ponto
+
+    se o tamanho da stringRecebida é menor que indice +3 ou se o digito formado pelos 3 caracteres a partir do indice > 255{
+        retorne;
+    }
+
+    IP < proximos três caracteres da stringRecebida a partir do indice e adiciona um ponto
+
+    AllValidIps(stringRecebida,indice+3,contador+1, IP)
+
+    IP < retira os três ultimos caracteres e o ponto
+
+}
