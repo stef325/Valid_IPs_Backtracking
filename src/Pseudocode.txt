@@ -1,4 +1,3 @@
-
 AllValidIps(stringRecebida,indice, contador, IP){
 
     se(o tamanho da stringRecebida = index e contador = 4){
