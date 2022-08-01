@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,44 @@
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@200&display=swap');
-        *{
-            font-family: Kantumruy,sans-serif;
+
+        * {
+            font-family: Kantumruy, sans-serif;
         }
     </style>
+    <script src="./BackTrackingVersion3.js"></script>
 </head>
+
 <body>
+    <div>
+        <form id="formulario">
+            <input type="text" id="campo">
+            <input type="submit" value="Gerar todos IPS">
+        </form>
+    </div>
     <div class="root" id="root">
-        
+
     </div>
     <hr>
     <div class="trace" id="trace">
-        
+
     </div>
-    <script src="./script.js"></script>
+
+    <script>
+        var form = document.getElementById('formulario');
+        var campo = document.getElementById('campo');
+
+        form.addEventListener('submit', function (e) {
+
+            var root = document.getElementById('root').innerHTML=""
+            var trace = document.getElementById('trace').innerHTML=""
+            // alerta o valor do campo
+            AllValidIps(campo.value, 0, 0, "")
+
+            // impede o envio do form
+            e.preventDefault();
+        });
+    </script>
 </body>
+
 </html>

@@ -1,5 +1,4 @@
 AllValidIps(stringRecebida,indice, contador, IP){
-
     se(o tamanho da stringRecebida = index e contador = 4){
         apresentar solução (IP)
         retorne;
@@ -18,13 +17,10 @@ AllValidIps(stringRecebida,indice, contador, IP){
                 retorne;
             }
         }
-        IP < proximo caractere da stringRecebida a partir de indice até indice+i+1 e adiciona um ponto
+        IP < adiciona proximo caractere da stringRecebida a partir de indice até indice+i+1 e adiciona um ponto
 
         AllValidIps(stringRecebida,indice+i+1,contador+1, IP)
 
         IP < retira i+2 caracteres
     }
-    
-    
-
 }
